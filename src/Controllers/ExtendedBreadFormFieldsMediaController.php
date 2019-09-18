@@ -39,7 +39,7 @@ class ExtendedBreadFormFieldsMediaController extends VoyagerMediaController
 
                 $exploded = explode(".", $image);
 
-                if (count($dataRow->details->thumbnails) > 0) {
+                if (isset($dataRow->details->thumbnails) && count($dataRow->details->thumbnails) > 0) {
                     for ($i=0; $i < count($dataRow->details->thumbnails); $i++) { 
                         $nameThumbnails = $dataRow->details->thumbnails[$i]->name;
 
